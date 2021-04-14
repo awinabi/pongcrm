@@ -1,0 +1,14 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started with Django and Webpack</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+      {% block content %}
+      <h1>Swap Block</h1>
+      {% endblock %}
+    <script src="{% static 'main-bundle.js' %}"></script>
+  </body>
+</html>

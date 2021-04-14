@@ -1,0 +1,1 @@
+(()=>{"use strict";var o,l,e;document.body.appendChild(((o=document.createElement("div")).innerHTML="Hello webpack",o)),console.log("call from module",(l=window.location,e=Math.floor(10*Math.random()),console.log("calling random num gen"),"helloi worldy "+l+" "+e))})();
