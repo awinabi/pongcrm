@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
+    "build": "rm -rf assets/build && npm run webpack && npm run scss",
     "watch": "webpack --mode development --watch",
-    "compile:css": "node-sass -o assets/build/css assets/sass"
+    "scss": "sass --load-path=node_modules --style=compressed assets/sass:assets/build/css",
+    "webpack": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -16,13 +17,12 @@
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^5.0.0-beta3",
+    "concurrently": "^6.0.2",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0"
   },
-  "dependencies": {
-    "bootstrap": "^5.0.0-beta3",
-    "node-sass": "^5.0.0"
-  }
+  "dependencies": {}
 }
