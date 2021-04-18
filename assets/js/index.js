@@ -1,4 +1,5 @@
 import hello from './functions';
+import exampleApp from './components/ExampleApp';
 
 function component() {
   const element = document.createElement('div');
@@ -9,3 +10,5 @@ function component() {
 
 document.body.appendChild(component());
 console.log('call from module', hello(window.location));
+
+window.exampleApp = exampleApp;
