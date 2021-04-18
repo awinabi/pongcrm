@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf assets/build && npm run webpack && npm run scss",
+    "build": "rm -rf assets/build && npm run webpack && npm run scss && cp -R assets/img assets/build/",
     "watch": "webpack --mode development --watch",
     "scss": "sass --load-path=node_modules --style=compressed assets/sass:assets/build/css",
     "webpack": "webpack --mode production"

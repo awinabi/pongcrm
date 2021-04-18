@@ -2,7 +2,8 @@ import hello from './functions';
 
 function component() {
   const element = document.createElement('div');
-  element.innerHTML = 'Hello webpack';
+  element.innerHTML = 'Hello from Webpack!';
+  element.className = 'alert alert-info'
   return element;
 }
 
